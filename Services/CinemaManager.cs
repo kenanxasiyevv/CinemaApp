@@ -65,6 +65,7 @@ namespace CinemaApp.Services
             }
              
             DataContext.Cinemas[index] = newCinema;
+            Console.WriteLine($"\nCinema deyisdirildi!\n");
         }
     }
 }

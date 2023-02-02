@@ -66,7 +66,8 @@ namespace CinemaApp.Services
                 return;
             }
 
-            DataContext.Sessions[index] = newSession;   
+            DataContext.Sessions[index] = newSession;
+            Console.WriteLine($"\nSeans deyisdirildi!\n");
         }
 
         public void PrintSessionSeats(Session session)

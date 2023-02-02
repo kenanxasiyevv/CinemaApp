@@ -65,6 +65,7 @@ namespace CinemaApp
             }
 
             DataContext.Halls[index] = newHall;
+            Console.WriteLine($"\nZal deyisdirildi!\n");
         }
     }
 }
