@@ -64,6 +64,7 @@ namespace CinemaApp
             }
 
             DataContext.Films[index] = newFilm;
+            Console.WriteLine($"\nFilm deyisdirildi!\n");
         }
     }
 }

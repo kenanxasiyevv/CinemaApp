@@ -114,9 +114,13 @@ namespace CinemaApp
                 command = Console.ReadLine();
 
                 if (command == "buy ticket")
+                {
                     ticketManager.BuyTicket();
+                }
                 else if (command == "show tickets")
+                {
                     ticketManager.Print();
+                }
                 else if (command == "get film")
                 {
                     Console.Write("Film Id-si daxil edin: ");
@@ -183,7 +187,7 @@ namespace CinemaApp
                     };
                     hallManager.Update(id, mars);
                 }
-                else if(command == "get all halls")
+                else if (command == "get all halls")
                 {
                     Console.WriteLine(hallManager.GetAll());
                 }
