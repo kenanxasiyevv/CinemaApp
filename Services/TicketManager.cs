@@ -30,7 +30,7 @@ namespace CinemaApp.Services
 
             if (cinema == null)
             {
-                Console.WriteLine("Not found");
+                Console.WriteLine("Not found!");
 
                 goto cinema;
             }
@@ -49,11 +49,8 @@ namespace CinemaApp.Services
 
             if (session == null || session.CinemaId != cinema.Id)
             {
-                Console.WriteLine("Not found");
-
                 goto seans;
             }
-
             Console.WriteLine(session);
 
             _sessionManager.PrintSessionSeats(session);
@@ -64,7 +61,7 @@ namespace CinemaApp.Services
 
             if (!(row >= 1 && row <= session.Seats.GetLength(0)))
             {
-                Console.WriteLine("Row is not correct");
+                Console.WriteLine("Row is not correct!");
 
                 goto row;
             }
@@ -75,14 +72,14 @@ namespace CinemaApp.Services
 
             if (!(column >= 1 && column <= session.Seats.GetLength(1)))
             {
-                Console.WriteLine("Column is not correct");
+                Console.WriteLine("Column is not correct!");
 
                 goto column;
             }
 
             if (session.Seats[row - 1, column - 1] == State.Full)
             {
-                Console.WriteLine("This seat is not empty");
+                Console.WriteLine("This seat is not empty!");
 
                 goto row;
             }
@@ -97,7 +94,7 @@ namespace CinemaApp.Services
             };
 
             DataContext.Tickets.Add(ticket);
-            Console.WriteLine("Ticket bought");
+            Console.WriteLine("Ticket bought!");
         }
 
         public void Print()

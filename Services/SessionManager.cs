@@ -19,13 +19,13 @@ namespace CinemaApp.Services
 
             if (index == -1)
             {
-                Console.WriteLine("Not found");
+                Console.WriteLine("Not found!");
 
                 return;
             }
            
             DataContext.Sessions.RemoveAt(index);
-            Console.WriteLine("Deleted");
+            Console.WriteLine("Deleted!");
         }
 
         public Session Get(int id)
@@ -33,7 +33,7 @@ namespace CinemaApp.Services
             int index = FindHelper.FindSessionIndex(id);
             if (index == -1)
             {
-                Console.WriteLine("Not found");
+                Console.WriteLine("Not found!");
 
                 return null;
             }
@@ -61,7 +61,7 @@ namespace CinemaApp.Services
 
             if (index == -1)
             {
-                Console.WriteLine("Not found");
+                Console.WriteLine("Not found!");
 
                 return;
             }

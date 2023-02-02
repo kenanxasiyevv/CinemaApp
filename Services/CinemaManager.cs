@@ -18,13 +18,13 @@ namespace CinemaApp.Services
 
             if (index == -1)
             {
-                Console.WriteLine("Not found");
+                Console.WriteLine("Not found!");
 
                 return;
             }
 
             DataContext.Cinemas.RemoveAt(index);
-            Console.WriteLine("Deleted");
+            Console.WriteLine("Deleted!");
         }
 
         public Cinema Get(int id)
@@ -59,7 +59,7 @@ namespace CinemaApp.Services
 
             if (index == -1)
             {
-                Console.WriteLine("Not found");
+                Console.WriteLine("Not found!");
 
                 return;
             }

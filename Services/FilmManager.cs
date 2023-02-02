@@ -18,7 +18,7 @@ namespace CinemaApp
 
             if(id == -1)
             {
-                Console.WriteLine("Not Found");
+                Console.WriteLine("Not Found!");
 
                 return;
             }
@@ -32,7 +32,7 @@ namespace CinemaApp
 
             if (id == -1)
             {
-                Console.WriteLine("Not Found");
+                Console.WriteLine("Not Found!");
 
                 return null;
             }
@@ -58,7 +58,7 @@ namespace CinemaApp
 
             if (index == -1)
             {
-                Console.WriteLine("Not found");
+                Console.WriteLine("Not found!");
 
                 return;
             }
