@@ -35,7 +35,6 @@ namespace CinemaApp
                 ColumnCount = 6
             };
 
-
             var cinemaPlus = new Cinema
             {
                 Id = 1,
@@ -58,7 +57,7 @@ namespace CinemaApp
                 TimeInMinute = 95
             };
 
-            Film filmZodiac = new Film
+            var filmZodiac = new Film
             {
                 Id = 2,
                 Name = "Zodiac",
@@ -122,7 +121,8 @@ namespace CinemaApp
                 {
                     Console.Write("Film Id-si daxil edin: ");
                     int id = int.Parse(Console.ReadLine());
-                    filmManager.Get(id);
+
+                    Console.WriteLine(filmManager.Get(id));
                 }
                 else if (command == "delete film")
                 {
@@ -136,7 +136,7 @@ namespace CinemaApp
                 }
                 else if (command == "get all films")
                 {
-                    filmManager.GetAll();
+                    Console.WriteLine(filmManager.GetAll());
                 }
                 else if (command == "update film")
                 {
@@ -150,14 +150,13 @@ namespace CinemaApp
                         Director = "James Cameron",
                         TimeInMinute = 120
                     };
-
                     filmManager.Update(id, filmAvatar);
                 }
                 else if (command == "get hall")
                 {
                     Console.Write("Zal Id-si daxil edin: ");
                     int id = int.Parse(Console.ReadLine());
-                    hallManager.Get(id);
+                    Console.WriteLine(hallManager.Get(id));
                 }
                 else if (command == "show halls")
                 {
@@ -184,6 +183,10 @@ namespace CinemaApp
                     };
                     hallManager.Update(id, mars);
                 }
+                else if(command == "get all halls")
+                {
+                    Console.WriteLine(hallManager.GetAll());
+                }
                 else if (command == "update cinema")
                 {
                     Console.Write("Deyismek istediyiniz cinemanin Id-sini daxil edin: ");
@@ -198,43 +201,43 @@ namespace CinemaApp
 
                     cinemaManager.Update(id, denizMallCinema);
                 }
-                else if(command == "delete cinema")
+                else if (command == "delete cinema")
                 {
                     Console.Write("Cinema Id-si daxil edin: ");
                     int id = int.Parse(Console.ReadLine());
 
                     cinemaManager.Delete(id);
                 }
-                else if(command == "get cinema")
+                else if (command == "get cinema")
                 {
                     Console.Write("Cinema Id-si daxil edin: ");
                     int id = int.Parse(Console.ReadLine());
 
-                    cinemaManager.Get(id);
+                    Console.WriteLine(cinemaManager.Get(id));
                 }
                 else if (command == "get all cinemas")
                 {
-                    cinemaManager.GetAll();
+                    Console.WriteLine(cinemaManager.GetAll());
                 }
                 else if (command == "get session")
                 {
                     Console.Write("Seans Id-si daxil edin: ");
                     int id = int.Parse(Console.ReadLine());
 
-                    sessionManager.Get(id);
+                    Console.WriteLine(sessionManager.Get(id));
                 }
-                else if(command == "get all sessions")
+                else if (command == "get all sessions")
                 {
-                    sessionManager.GetAll();
+                    Console.WriteLine(sessionManager.GetAll());
                 }
-                else if(command == "delete session")
+                else if (command == "delete session")
                 {
                     Console.Write("Seans Id-si daxil edin: ");
                     int id = int.Parse(Console.ReadLine());
 
                     sessionManager.Delete(id);
                 }
-                else if(command == "update session")
+                else if (command == "update session")
                 {
                     Console.Write("Deyismek istediyiniz seansin Id-sini daxil edin: ");
                     int id = int.Parse(Console.ReadLine());
